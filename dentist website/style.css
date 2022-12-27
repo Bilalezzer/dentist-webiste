@@ -1,0 +1,230 @@
+/* Custom properties */
+:root {
+	--clr-gray: #666;
+	--clr-dark-blue: #063970;
+	--clr-light-blue: #abdbe3;
+	--clr-medium-blue: #61ade1; 
+	--clr-white: #fff;
+	--clr-lighter-blue: #eef8ff;
+}
+/* General styling*/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+ul {
+	list-style-type: none;
+}
+li{
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: var(--clr-dark-blue);
+}
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 2rem;
+	padding: 1rem;
+	border-bottom: .2rem solid var(--clr-medium-blue);
+
+}
+.logo {
+	max-width: 3rem;
+}
+
+nav li a {
+	margin: 0 1rem;
+	text-transform: uppercase;
+	color: var(--clr-gray);
+	transition: color 250ms;
+	font-weight: 600;
+}
+nav li a:is(:hover ,:focus) {
+	color: var(--clr-medium-blue);
+}
+.phone-contact {
+	padding: .5rem;
+	background-color: var(--clr-white);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 2rem;
+}
+.phone-contact i {
+	background-color: var(--clr-light-blue);
+	padding: .5rem;
+	border-radius: 50%;
+}
+.hero {
+	min-height: 90vh;
+	background-color: var(--clr-lighter-blue);
+}
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3rem;
+
+}
+.hero__body {
+	max-width: 35rem;
+	color: var(--clr-gray);
+}
+.hero__body h1 {
+	font-size: 5rem;
+	line-height: 1;
+	text-transform: capitalize;
+	margin-bottom: 1.5rem;
+	color: var(--clr-dark-blue);
+}
+.btn {
+	color: var(--clr-white);
+	background-image: radial-gradient(var(--clr-dark-blue), var(--clr-medium-blue));
+	padding: 1rem 3rem;
+	border: none;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	font-weight: 700;
+	font-size: 1.1rem;
+	margin: 3rem 0 0;
+	cursor: pointer;
+	transition: 250ms;
+}
+.btn:is(:hover, :focus) {
+	transform: scale(1.1);
+}
+.about {
+	background-color: var(--clr-white);
+	padding: 2rem 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10rem;
+}
+.about__img {
+	width: 80%;
+}
+.about__img img {
+	width: 100%;
+}
+.about__body {
+	padding: 0 1rem;
+}
+.about__body h2 {
+	font-size: 3rem;
+	line-height: 1;
+	text-transform: capitalize;
+	margin-bottom: 3rem;
+}
+.about__body p {
+	margin: 0 0 2rem;
+}
+.about__body p span {
+	color: var(--clr-medium-blue);
+	font-weight: 700;
+}
+.services {
+	background-color: var(--clr-lighter-blue);
+	text-align: center;
+	padding: 2rem;
+	color: var(--clr-gray);
+}
+.services h2 {
+	color: var(--clr-dark-blue);
+	font-size: 3rem;
+	text-transform: capitalize;
+}
+.services > p {
+	margin: 1.5rem 0 2rem;
+}
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 5rem;
+	margin: 2rem 0;
+	}
+.card {
+	background-color: var(--clr-white);
+	padding: 3rem 5rem 2rem;
+	border-radius: 3rem;
+	box-shadow: 0 2px 5px #666;
+}
+.card h3 {
+	color: var(--clr-dark-blue);
+	margin: 1rem 0;
+}
+.icon {
+	border-radius: 50%;
+	background-color: var(--clr-light-blue);
+	padding: .5rem;
+}
+.cta {
+	background-color: var(--clr-white);
+	padding: 5rem;
+	text-align: center;
+}
+.cta-container {
+	background-color: var(--clr-light-blue);
+	padding: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0 1px 3px #555;
+}
+.cta-container p {
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--clr-dark-blue);
+	padding: 3rem;
+}
+.footer h3 {
+	font-size: 1.5rem;
+	color: var(--clr-white);
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.social-list i {
+	color: var(--clr-white);
+	margin: 1rem;
+}
+.newsletter input {
+	border: .1rem solid var(--clr-light-blue);
+	padding: .5rem 1rem;
+	border-radius: 2rem 0 0 2rem;
+	margin: 1rem;
+	font: inherit;
+}
+.btn-submit {
+	background-color: var(--clr-medium-blue);
+	padding: .59875rem 1rem;
+	border-radius: 0 2rem 2rem 0;
+	border: none;
+	font: inherit;
+	margin: 0 0 0 -1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 250ms;
+	color: var(--clr-white)
+}
+.btn-submit:is(:hover, :focus) {
+	color: var(--clr-dark-blue);
+	background-color: var(--clr-light-blue);
+}
+
+
